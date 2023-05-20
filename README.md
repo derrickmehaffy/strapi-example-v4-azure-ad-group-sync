@@ -4,6 +4,10 @@ This is an example of how to sync Azure AD groups to Strapi using the [Azure AD 
 
 Using the Graph API from Microsoft, we can search the Azure AD for groups and users. We can then use this information to set (or create) groups in Strapi and assign users to these groups.
 
+## Demo Video
+
+https://www.loom.com/share/8ee5590e304d4c77a7f2e9e35b7d030d
+
 ## How this works
 
 We of course need to configure the Azure AD OAuth2 sign-in, however since that does not allow setting groups we need to fetch additional information from the Graph API. This is done by creating a custom service that can be called in some of the authentication lifecycles.
