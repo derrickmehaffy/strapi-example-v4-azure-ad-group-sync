@@ -28,7 +28,7 @@ module.exports = ({ env }) => ({
                 ),
             },
             (accessToken, refreshToken, params, profile, done) => {
-              let waadProfile = jwt.decode(params.id_token, "", true);
+              const waadProfile = jwt.decode(params.id_token, { json: true });
               done(null, {
                 email: waadProfile.email,
                 username: waadProfile.email,
